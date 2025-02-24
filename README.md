@@ -2,7 +2,7 @@
 
 A docker image based on [pkgx](https://github.com/pkgxdev/pkgx) with a "command_not_found" bash handle.
 
-No need to use the `pkgx` prefix to install missing packages!
+No need to use the `pkgx` prefix command to install missing packages!
 
 ## Usage
 
@@ -25,7 +25,7 @@ pkgx/ $ psql@15 --version
 psql (PostgreSQL) 15.2
 ```
 
-In Kubernetes:
+With Kubernetes:
 
 ```bash
 kubectl run pkgx-shell --image=ghcr.io/cterence/pkgx-bash:latest -it --rm
