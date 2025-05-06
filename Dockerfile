@@ -1,3 +1,3 @@
-FROM pkgxdev/pkgx:v2.6.0@sha256:a0a9fcdeddec4309c96cfc0062f399c0b467295fa136100fa1c6f7f7ad04426a
+FROM pkgxdev/pkgx:v2.7.0@sha256:3cb64e57aede0ce66da3e5be729d7f72d46119a1583aa69e69b60e7d419d58b2
 
 RUN echo 'command_not_found_handle() { pkgx "$@"; }' >> /root/.bashrc
