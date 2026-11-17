@@ -1,32 +1,33 @@
 {
-  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   extends: [
-    "config:best-practices",
-    ":timezone(Europe/Paris)",
-    ":label(renovate)",
-    ":semanticPrefixFix",
-    ":separateMultipleMajorReleases",
-    ":automergeBranch",
-    ":automergeStableNonMajor",
-    ":automergeDigest",
-    ":rebaseStalePrs",
-    ":semanticCommits",
+    'config:best-practices',
+    ':timezone(Europe/Paris)',
+    ':label(renovate)',
+    ':semanticPrefixFix',
+    ':separateMultipleMajorReleases',
+    ':automergeBranch',
+    ':automergeStableNonMajor',
+    ':automergeDigest',
+    ':rebaseStalePrs',
+    ':semanticCommits',
   ],
-  dependencyDashboardTitle: "🤖 Renovate Dashboard",
-  commitMessageTopic: "{{depName}}",
-  commitMessageExtra: "to {{newVersion}}",
-  commitMessageSuffix: "",
+  dependencyDashboard: {
+    title: '🤖 Renovate Dashboard',
+  },
+  commitMessageTopic: '{{depName}}',
+  commitMessageExtra: 'to {{newVersion}}',
+  commitMessageSuffix: '',
   packageRules: [
-    // Auto-merge all patches
     {
       matchUpdateTypes: [
-        "minor",
-        "patch",
-        "digest"
+        'minor',
+        'patch',
+        'digest',
       ],
       ignoreTests: true,
       automerge: true,
-      automergeType: "branch"
+      automergeType: 'branch',
     },
-  ]
+  ],
 }
